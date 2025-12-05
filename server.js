@@ -1,13 +1,13 @@
 const express = require('express');
-const fs = require('fs');
 const bodyParser = require("body-parser"); /* To handle post parameters */
 const path = require("path");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
+
 app.set('view engine', 'ejs');
-app.set('views', __dirname);
 app.set("views", path.resolve(__dirname, "templates"));
+
 var public = require('path').join(__dirname,'/public'); 
 app.use(express.static(public)); 
 
@@ -22,5 +22,6 @@ app.get('/', (req, res) => {
     res.render('home');
     main();
 });
+
 
 
