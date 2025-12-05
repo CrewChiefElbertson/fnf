@@ -18,8 +18,9 @@ app.listen(PORT, () => {
     console.log(`Web server started and running at http://localhost:${PORT}`);
 });
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home');
     main();
 });
+
 
