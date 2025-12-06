@@ -103,5 +103,8 @@ form {
 }
 
 .quicklinks {
-  margin: auto;
+  color: whitesmoke;
+  font-size: 24px;
+  margin: 28px;
+  text-align: center;
 }
